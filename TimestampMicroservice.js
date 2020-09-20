@@ -19,3 +19,7 @@ app.get("/api/timestamp/:date_string",function(req,res){
     }
   
 });
+
+app.get("/api/timestamp",function(req,res){
+  res.json({ unix: Date.now(), utc: Date() });
+});
